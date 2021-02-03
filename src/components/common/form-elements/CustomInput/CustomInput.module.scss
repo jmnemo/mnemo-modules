@@ -1,0 +1,35 @@
+@import 'src/styles/_variables.scss';
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 32px;
+  width: 100%;
+  background-color: $controls-bg-light;
+  border: 1px solid $main-color-dark;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.label {
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  user-select: none;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+.input {
+  min-width: 40px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #fff;
+  border: 1px solid $main-color-dark;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  padding: 0 10px;
+  margin-right: 8px;
+}

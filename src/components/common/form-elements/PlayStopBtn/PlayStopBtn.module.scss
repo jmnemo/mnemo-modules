@@ -1,0 +1,111 @@
+@import 'src/styles/_variables.scss';
+
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid $main-color-dark;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $controls-bg-light;
+
+    .iconWrap {
+      transform: scale(1.1);
+    }
+  }
+
+  &:active {
+    .iconWrap {
+      transform: scale(1);
+    }
+  }
+}
+
+.iconWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid $main-color-dark;
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out;
+  margin-left: 8px;
+}
+
+.playIcon,
+.stopIcon {
+  display: block;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+.playIcon {
+  width: 16px;
+  height: 16px;
+
+  path {
+    fill: $animations;
+  }
+}
+
+.stopIcon {
+  width: 14px;
+  height: 14px;
+  background-color: $blood-red;
+  border-radius: 2px;
+  transform: rotate(-180deg) scale(0);
+}
+
+.pauseMod {
+  position: relative;
+  background-color: transparent;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 38%;
+    height: 100%;
+    border-radius: 2px;
+    background-color: $blood-red;
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+}
+
+.label {
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.active {
+  .iconWrap {
+    .playIcon {
+      transform: rotate(180deg) scale(0);
+    }
+
+    .stopIcon {
+      transform: rotate(0) scale(1);
+    }
+  }
+}

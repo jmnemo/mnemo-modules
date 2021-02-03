@@ -1,0 +1,63 @@
+@import 'src/styles/_variables.scss';
+
+.list {
+  padding-right: 10px;
+}
+
+.container {
+  display: flex;
+  margin-top: 20px;
+
+  &:first-child {
+    padding-right: 42px;
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $main-color-dark;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  border: 1px solid $main-color-dark;
+  cursor: pointer;
+
+  &:hover {
+    svg {
+      transform: scale(1.2);
+    }
+  }
+
+  svg {
+    width: 10px;
+    height: 10px;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.addBtn {
+  position: relative;
+  top: 26px;
+  transform: rotate(45deg);
+  border-radius: 50% 0 50% 50%;
+  margin-right: 10px;
+
+  svg {
+    path {
+      fill: $animations;
+    }
+  }
+}
+
+.removeBtn {
+  border-radius: 4px;
+  margin-left: 10px;
+
+  svg {
+    path {
+      fill: $blood-red;
+    }
+  }
+}

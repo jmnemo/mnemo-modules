@@ -1,0 +1,69 @@
+@import 'src/styles/_variables.scss';
+
+.btn {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid $main-color-dark;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $controls-bg-light;
+
+    .iconWrap {
+      transform: scale(1.1);
+    }
+  }
+
+  &:active {
+    .iconWrap {
+      transform: scale(1);
+    }
+  }
+}
+
+.disabled {
+  opacity: 0.3;
+}
+
+.iconWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid $main-color-dark;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  margin-left: 8px;
+}
+
+.resetIcon {
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  transition: all 0.4s ease-in-out;
+
+  circle {
+    stroke: $animations;
+  }
+
+  path {
+    fill: $animations;
+  }
+}
+
+.label {
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  padding: 0 10px;
+  margin: 0 auto;
+}

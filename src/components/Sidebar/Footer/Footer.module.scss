@@ -1,0 +1,42 @@
+@import "src/styles/variables";
+
+.footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  background-color: $main;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 300;
+  transition: all 0.6s ease-in-out;
+  color: #FFF;
+  padding: 0 16px;
+
+  &:hover {
+    svg {
+      transform: rotate3d(0, 0, 1, 10deg);
+    }
+  }
+
+  svg {
+    width: 32px;
+    height: 32px;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.componentsSection {
+  background-color: $components;
+}
+
+.animationsSection {
+  background-color: $animations;
+}
+
+.utilsSection {
+  background-color: $utils;
+}

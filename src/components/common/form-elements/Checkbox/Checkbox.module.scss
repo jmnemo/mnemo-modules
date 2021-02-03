@@ -1,0 +1,96 @@
+@import 'src/styles/_variables.scss';
+
+.btn {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid $main-color-dark;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $controls-bg-light;
+
+    .iconWrap {
+      transform: scale(1.1);
+    }
+  }
+
+  &:active {
+    .iconWrap {
+      transform: scale(1);
+    }
+  }
+}
+
+.iconWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid $main-color-dark;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+  margin-left: 8px;
+}
+
+.checkIcon {
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 4px;
+  background-image: linear-gradient($animations, $animations);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: -10px 0;
+  border: 1px solid $animations;
+  border-radius: 2px 0 2px 2px;
+  transform: translate(-6px, 4px) rotate(45deg);
+  transition: all 0.12s linear 0.12s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 100%;
+    right: -1px;
+    width: 2px;
+    height: 18px;
+    background-color: #fff;
+    background-image: linear-gradient($animations, $animations);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 18px;
+    border: 1px solid $animations;
+    border-bottom: 0 solid transparent;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    transition: all 0.12s linear;
+  }
+}
+
+.label {
+  font-size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.active {
+  .checkIcon {
+    background-position: 0 0;
+    transition: all 0.12s linear;
+
+    &:before {
+      background-position: 0 0;
+      transition: all 0.12s linear 0.12s;
+    }
+  }
+}

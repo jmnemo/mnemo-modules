@@ -1,0 +1,100 @@
+@import "src/styles/variables";
+
+.presetBtns {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.presetBtn {
+  margin-bottom: 20px;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.presetFrame {
+  position: relative;
+  display: flex;
+  min-height: 320px;
+  border-radius: 4px;
+  border: 1px solid $main-color-dark;
+  padding: 20px 62px 20px 20px;
+}
+
+.codeWrap {
+  width: 100%;
+
+  pre {
+    min-height: calc(100% - 30px);
+    border-radius: 4px;
+    border: 1px solid $main-color-dark;
+    margin: 6px 0 0 0 !important;
+  }
+}
+
+.viewCodeTitle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.viewCodeActive {
+  padding: 20px 20px 40px 62px;
+
+  .viewCodeBtn {
+    right: calc(100% - 42px);
+
+    span {
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.viewCodeBtn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -8px;
+  right: 10px;
+  width: 32px;
+  height: calc(100% + 16px);
+  background-color: #fff;
+  border: 1px solid $main-color-dark;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $controls-bg-light;
+  }
+
+  span {
+    position: absolute;
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: nowrap;
+    transform: rotate(90deg);
+  }
+}
+
+.copyToClipboard {
+  position: absolute;
+  bottom: 10px;
+  right: 61px;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid $main-color-dark;
+  padding: 9px 30px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $controls-bg-light;
+  }
+}
